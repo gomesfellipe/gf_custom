@@ -1,6 +1,8 @@
 # Opcoes do RMarkdown
 knitr::opts_chunk$set(echo = TRUE, warning = F, fig.height = 7,
-                      fig.width = 10, knitr.kable.NA = '')
+                      fig.width = 10, knitr.kable.NA = '',OutDec = ",")
+
+options(scipen = 99999)
 # Carregando pacotes
 packages <- c("purrr", "dplyr", "ggplot2")
 suppressMessages(purrr::walk(packages,library, character.only = TRUE, warn.conflicts = FALSE))
