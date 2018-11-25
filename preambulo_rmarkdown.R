@@ -19,5 +19,6 @@ theme_set(theme_bw())
 kable2 <- function(x,...){
   kable(x,digits = 4,...) %>%
     kable_styling(bootstrap_options = "striped", full_width = F) %>%
-    kable_styling(c("striped", "bordered"))
+    kable_styling(c("striped", "bordered")) %>%
+    scroll_box(width = "100%")
 }
