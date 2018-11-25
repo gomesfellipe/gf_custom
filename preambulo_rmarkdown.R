@@ -19,8 +19,7 @@ kable2 <- function(x,linhas=NULL,colunas=NULL, ...){
   k <- 
     kable(x,digits = 4,...) %>%
     kable_styling(bootstrap_options = "striped", full_width = F) %>%
-    kable_styling(c("striped", "bordered"))  %>%
-    scroll_box(width = "100%")
+    kable_styling(c("striped", "bordered"))
   
   if (!is.null(linhas)) {
     # destque na linha:
@@ -31,6 +30,7 @@ kable2 <- function(x,linhas=NULL,colunas=NULL, ...){
     # destque na colunas:
     k <-  k %>% column_spec(colunas,bold=T, color="white", background = "#CCE2FF")
   }
-  k
+  k %>%
+    scroll_box(width = "100%")
 }
 
