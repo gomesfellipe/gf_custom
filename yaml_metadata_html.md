@@ -1,6 +1,6 @@
 ---
 title: <center> Título </center>
-date: <center> date: <center>"`r format(Sys.time(), '%d %B, %Y')`" </center> </center>
+date: <center> "`r format(Sys.time(), '%d %B, %Y')`" </center>
 output: 
   html_document:
     number_sections: true
